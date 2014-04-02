@@ -1,6 +1,6 @@
 ## Fork of Nicholas Zakas's Computer Science In JavaScript
 
-This fork adds the heap sort and insertion sort algorithms.
+This fork adds the heap sort and bogo sort algorithms.
 
 Collection of classic computer science paradigms, algorithms, and approaches written in JavaScript. All of the code is available under an MIT License.
 
