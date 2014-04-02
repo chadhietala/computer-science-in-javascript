@@ -65,7 +65,6 @@ function mergeSort(items){
         i,
         len;
 
-
     for (i=0, len=items.length; i < len; i++){
         work.push([items[i]]);
     }

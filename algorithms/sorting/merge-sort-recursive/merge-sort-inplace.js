@@ -1,6 +1,6 @@
 /*
  * Recursive merge sort implementation in JavaScript
- * Copyright (c) 2009 Nicholas C. Zakas
+ * Copyright (c) 2012 Nicholas C. Zakas
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -58,7 +58,11 @@ function mergeSort(items){
 
     var middle = Math.floor(items.length / 2),
         left    = items.slice(0, middle),
-        right   = items.slice(middle);
-
-    return merge(mergeSort(left), mergeSort(right));
+        right   = items.slice(middle),
+        params = merge(mergeSort(left), mergeSort(right));
+    
+    // Add the arguments to replace everything between 0 and last item in the array
+    params.unshift(0, items.length);
+    items.splice.apply(items, params);
+    return items;
 }
